@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AR Pilot Study 02 – Stimulus ID: LageB_parallel_zwischen_gerade_ebene</title>
+
+  <!-- model-viewer -->
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: #ffffff;
+    }
+
+    header {
+      padding: 10px 14px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .sub {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    model-viewer {
+      width: 100vw;
+      height: 85vh;
+      background: #ffffff;
+    }
+
+    /* ===== AR Button (top-right fixed, readable) ===== */
+    .ar-button {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #000;
+      background: #fff;
+      color: #000;
+
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      -webkit-appearance: none;
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .ar-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      background: #000;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      flex: 0 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    Stimulus ID: LageB_parallel_zwischen_gerade_ebene<br>
+    <span class="sub">Pilot study – Please tap “View in AR”.</span>
+  </header>
+
+  <model-viewer
+    src="LageB_parallel_zwischen_gerade_ebene.glb"
+    ios-src="LageB_parallel_zwischen_gerade_ebene.usdz"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    camera-controls
+    alt="AR model: LageB_parallel_zwischen_gerade_ebene">
+
+    <!-- Right-top fixed AR button -->
+    <button slot="ar-button" class="ar-button" aria-label="View in AR">
+      <span class="ar-badge">AR</span>
+      <span>View in AR</span>
+    </button>
+
+  </model-viewer>
+
+</body>
+</html>
