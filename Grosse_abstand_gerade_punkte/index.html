@@ -6,7 +6,6 @@
 
   <title>AR Pilot Study 02 – Stimulus ID: Grosse_abstand_gerade_punkte</title>
 
-  <!-- model-viewer -->
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
@@ -35,32 +34,58 @@
       background: #ffffff;
     }
 
-    /* ===== デフォルトARボタンを右上に固定（iOS/Android両対応）===== */
-    model-viewer::part(default-ar-button) {
+    /* ===== ARボタン（右上固定・見やすい版） ===== */
+    .ar-button {
       position: absolute;
       top: 12px;
       right: 12px;
-      left: auto;
-      bottom: auto;
 
-      padding: 10px 14px;
-      border-radius: 8px;
-      border: none;
+      /* 見た目 */
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #000;
+      background: #fff;     /* 白背景にして文字が消えないように */
+      color: #000;
 
-      background: #000000;
-      color: #ffffff;
-
+      /* 文字が必ず見えるように */
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
+      line-height: 1;
+
+      /* レイアウト（中央寄せ） */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      /* iOSでボタン表示が変になるのを防ぐ */
+      -webkit-appearance: none;
+      appearance: none;
       cursor: pointer;
+    }
+
+    .ar-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      background: #000;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      flex: 0 0 auto;
     }
   </style>
 </head>
 
 <body>
+
   <header>
     Stimulus ID: Grosse_abstand_gerade_punkte<br>
-    <span class="sub">Pilot study – Please tap the AR button.</span>
+    <span class="sub">Pilot study – Please tap “View in AR”.</span>
   </header>
 
   <model-viewer
@@ -70,6 +95,13 @@
     ar-modes="webxr scene-viewer quick-look"
     camera-controls
     alt="AR model: Grosse_abstand_gerade_punkte">
+
+    <!-- 右上固定：分かりやすいARボタン -->
+    <button slot="ar-button" class="ar-button" aria-label="View in AR">
+      <span class="ar-badge">AR</span>
+      <span>View in AR</span>
+    </button>
+
   </model-viewer>
 
 </body>
