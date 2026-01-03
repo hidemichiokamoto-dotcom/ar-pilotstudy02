@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AR Pilot Study 02 – Stimulus</title>
+
+  <!-- model-viewer (WebXR + AR Quick Look) -->
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #ffffff;
+    }
+
+    header {
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .sub {
+      font-size: 12px;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+
+    model-viewer {
+      width: 100vw;
+      height: 85vh;
+      background: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    Stimulus ID: Grosse_abstand_gerade_punkte<br>
+    <span class="sub">
+      Distance between a Line and a Point<br>
+      Pilot study (the presentation order is determined by the experimenter)
+    </span>
+  </header>
+
+  <model-viewer
+    src="Grosse_abstand_gerade_punkte.glb"
+    ios-src="Grosse_abstand_gerade_punkte.usdz"
+    ar
+    ar-modes="webxr quick-look"
+    camera-controls
+    alt="Distance between a Line and a Point">
+  </model-viewer>
+
+</body>
+</html>
