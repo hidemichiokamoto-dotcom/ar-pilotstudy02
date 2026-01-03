@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>AR Pilot Study 02 – Stimulus ID: Grosse_abstand_gerade_punkte</title>
 
-  <!-- model-viewer（WebXR + AR Quick Look + Scene Viewer） -->
+  <!-- model-viewer（WebXR / Scene Viewer / AR Quick Look 対応） -->
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
@@ -14,26 +15,45 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      background: #fff;
+      background: #ffffff;
     }
+
     header {
       padding: 10px 14px;
       font-size: 14px;
       line-height: 1.4;
     }
+
     .sub {
       font-size: 12px;
       opacity: 0.8;
     }
+
     model-viewer {
       width: 100vw;
       height: 85vh;
-      background: #fff;
+      background: #ffffff;
+    }
+
+    /* ===== ARボタン（右上固定・全課題共通） ===== */
+    .ar-button {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: none;
+      background: #000000;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
+
   <header>
     Stimulus ID: Grosse_abstand_gerade_punkte<br>
     <span class="sub">Pilot study – Please tap the AR button.</span>
@@ -46,6 +66,12 @@
     ar-modes="webxr scene-viewer quick-look"
     camera-controls
     alt="AR model: Grosse_abstand_gerade_punkte">
+
+    <!-- 右上固定 ARボタン -->
+    <button slot="ar-button" class="ar-button">
+      AR
+    </button>
+
   </model-viewer>
 
 </body>
