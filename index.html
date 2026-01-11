@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AR Pilot Study 02 – Index</title>
+  <title>AR Pilot Study 02 – Task Index</title>
 
   <style>
     body{
@@ -56,10 +56,26 @@
       border-radius:12px;
       padding:12px 12px;
     }
-    a.card:active{ transform: scale(0.998); }
-    .id{
-      font-weight:700;
+    a.card:hover{
+      background:#fafafa;
+    }
+    a.card:active{
+      transform: scale(0.998);
+    }
+    .left{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+      min-width:0;
+    }
+    .task{
+      font-weight:800;
       font-size:14px;
+      letter-spacing:0.2px;
+    }
+    .id{
+      font-size:12px;
+      opacity:.75;
       word-break:break-word;
     }
     .go{
@@ -71,6 +87,7 @@
       background:#fff;
       flex:0 0 auto;
       margin-left:10px;
+      white-space:nowrap;
     }
     footer{
       padding:10px 14px 18px;
@@ -82,33 +99,183 @@
 
 <body>
   <header>
-    <h1>AR Pilot Study 02 – Stimulus Index</h1>
-    <p class="sub">Tap a stimulus to open its AR page (iOS / iPadOS / Android supported).</p>
+    <h1>AR Pilot Study 02 – Task Index</h1>
+    <p class="sub">Open tasks in order (Task01 → Task15). iOS / iPadOS / Android supported.</p>
   </header>
 
   <main>
     <div class="note">
-      If AR does not start: open in Chrome (Android) / Safari (iPhone/iPad), then tap <b>View in AR</b>.
-      If the page looks old, add <b>?v=1</b> to the URL and reload.
+      <b>If AR does not start:</b><br>
+      • iPhone/iPad: open in Safari → tap <b>View in AR</b> (Quick Look).<br>
+      • Android: open in Chrome → tap <b>View in AR</b> (Scene Viewer).<br>
+      • If it looks old, reload once (or add <b>?v=1</b> to the URL).
     </div>
 
     <ul>
-      <li><a class="card" href="./Grosse_Winkenl_in_pyramide/"><span class="id">Grosse_Winkenl_in_pyramide</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./Grosse_Wuerfel_volume/"><span class="id">Grosse_Wuerfel_volume</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./Grosse_abstand_gerade_punkte/"><span class="id">Grosse_abstand_gerade_punkte</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./Grosse_abstand_punkt/"><span class="id">Grosse_abstand_punkt</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./Grosse_flache_Kreis/"><span class="id">Grosse_flache_Kreis</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./Grosse_flaeche_Quadrat/"><span class="id">Grosse_flaeche_Quadrat</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./Grosse_kugel_volume/"><span class="id">Grosse_kugel_volume</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./Grosse_laenge_strecken/"><span class="id">Grosse_laenge_strecken</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./Grosse_winkel/"><span class="id">Grosse_winkel</span><span class="go">Open</span></a></li>
+      <!-- Task01 -->
+      <li>
+        <a class="card" href="./Grosse_Wuerfel_volume/">
+          <span class="left">
+            <span class="task">Task01: Grosse_wuerfel_volume</span>
+            <span class="id">Folder: Grosse_Wuerfel_volume</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
 
-      <li><a class="card" href="./LageB_parallel_eben_eben/"><span class="id">LageB_parallel_eben_eben</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./LageB_parallel_zwischen_gerade_ebene/"><span class="id">LageB_parallel_zwischen_gerade_ebene</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./LageB_parallel_zwischen_grau_strecke/"><span class="id">LageB_parallel_zwischen_grau_strecke</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./LageB_senkrecht_eben_eben/"><span class="id">LageB_senkrecht_eben_eben</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./LageB_senkrecht_zwischen_grau_strecke/"><span class="id">LageB_senkrecht_zwischen_grau_strecke</span><span class="go">Open</span></a></li>
-      <li><a class="card" href="./LageB_zwischen_ebene_gerade_senkrecht/"><span class="id">LageB_zwischen_ebene_gerade_senkrecht</span><span class="go">Open</span></a></li>
+      <!-- Task02 -->
+      <li>
+        <a class="card" href="./Grosse_kugel_volume/">
+          <span class="left">
+            <span class="task">Task02: Grosse_kugel_volume</span>
+            <span class="id">Folder: Grosse_kugel_volume</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task03 -->
+      <li>
+        <a class="card" href="./Grosse_abstand_punkt/">
+          <span class="left">
+            <span class="task">Task03: Grosse_abstand_punkt</span>
+            <span class="id">Folder: Grosse_abstand_punkt</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task04 -->
+      <li>
+        <a class="card" href="./Grosse_abstand_gerade_punkte/">
+          <span class="left">
+            <span class="task">Task04: Grosse_abstand_gerade_punkte</span>
+            <span class="id">Folder: Grosse_abstand_gerade_punkte</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task05 -->
+      <li>
+        <a class="card" href="./Grosse_winkel/">
+          <span class="left">
+            <span class="task">Task05: Grosse_winkel</span>
+            <span class="id">Folder: Grosse_winkel</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task06 (表示名は winkeln でもOK / リンク先は実フォルダ名 Winkenl) -->
+      <li>
+        <a class="card" href="./Grosse_Winkenl_in_pyramide/">
+          <span class="left">
+            <span class="task">Task06: Grosse_winkel_in_pyramide</span>
+            <span class="id">Folder: Grosse_Winkenl_in_pyramide (spelling kept for compatibility)</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task07 -->
+      <li>
+        <a class="card" href="./Grosse_laenge_strecken/">
+          <span class="left">
+            <span class="task">Task07: Grosse_laenge_strecken</span>
+            <span class="id">Folder: Grosse_laenge_strecken</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task08 -->
+      <li>
+        <a class="card" href="./Grosse_flache_Kreis/">
+          <span class="left">
+            <span class="task">Task08: Grosse_flaeche_kreis</span>
+            <span class="id">Folder: Grosse_flache_Kreis</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task09 -->
+      <li>
+        <a class="card" href="./Grosse_flaeche_Quadrat/">
+          <span class="left">
+            <span class="task">Task09: Grosse_flaeche_quadrat</span>
+            <span class="id">Folder: Grosse_flaeche_Quadrat</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task10 -->
+      <li>
+        <a class="card" href="./LageB_parallel_eben_eben/">
+          <span class="left">
+            <span class="task">Task10: LageB_parallel_eben_eben</span>
+            <span class="id">Folder: LageB_parallel_eben_eben</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task11 -->
+      <li>
+        <a class="card" href="./LageB_senkrecht_eben_eben/">
+          <span class="left">
+            <span class="task">Task11: LageB_senkrecht_eben_eben</span>
+            <span class="id">Folder: LageB_senkrecht_eben_eben</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task12 -->
+      <li>
+        <a class="card" href="./LageB_parallel_zwischen_grau_strecke/">
+          <span class="left">
+            <span class="task">Task12: LageB_parallel_zwischen_grau_strecke</span>
+            <span class="id">Folder: LageB_parallel_zwischen_grau_strecke</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task13 -->
+      <li>
+        <a class="card" href="./LageB_senkrecht_zwischen_grau_strecke/">
+          <span class="left">
+            <span class="task">Task13: LageB_senkrecht_zwischen_grau_strecke</span>
+            <span class="id">Folder: LageB_senkrecht_zwischen_grau_strecke</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task14 -->
+      <li>
+        <a class="card" href="./LageB_zwischen_ebene_gerade_senkrecht/">
+          <span class="left">
+            <span class="task">Task14: LageB_zwischen_ebene_gerade_senkrecht</span>
+            <span class="id">Folder: LageB_zwischen_ebene_gerade_senkrecht</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
+
+      <!-- Task15 -->
+      <li>
+        <a class="card" href="./LageB_parallel_zwischen_gerade_ebene/">
+          <span class="left">
+            <span class="task">Task15: LageB_parallel_zwischen_gerade_ebene</span>
+            <span class="id">Folder: LageB_parallel_zwischen_gerade_ebene</span>
+          </span>
+          <span class="go">Open</span>
+        </a>
+      </li>
     </ul>
   </main>
 
@@ -117,4 +284,3 @@
   </footer>
 </body>
 </html>
-
